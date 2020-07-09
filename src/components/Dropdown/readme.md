@@ -19,3 +19,7 @@ This is a reusable component. Options and selection(active selected option) will
 ]
 
 ```
+
+##### useRef()
+It is used to get context of the top level element of any component.
+Eg. It can be used to check if the element clicked was part of the Component or not.

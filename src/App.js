@@ -30,12 +30,19 @@ const App = () => {
             label: 'Blue Color',
             value: 'blue'
         },
-    ]
-    const [selection, setSelection] = useState('Select a color')
+    ];
+
+    const [selection, setSelection] = useState('Select a color');
+    const [showDropdown, setShowDropdown] = useState(true);
     return <div className="ui container"> <br />
         {/* <Accordion items={items} /> */}
         {/* <Search/> */}
-        <Dropdown options={options} selection={selection} setSelection={setSelection} />
+        <button onClick={e => { setShowDropdown(!showDropdown) }}>Toggle Dropdown</button>
+        {
+            showDropdown &&
+            <Dropdown options={options} selection={selection} setSelection={setSelection} />
+        }
+
     </div>
 };
 
